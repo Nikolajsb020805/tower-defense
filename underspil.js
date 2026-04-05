@@ -24,8 +24,8 @@ export default class underspil extends Phaser.Scene{
         this.load.image('fjende', 'assets/Fjende.png');
         this.load.image('baggrund', 'assets/ban.png');
         this.load.image('shop', 'assets/shoppe.png');
-        this.load.image('Shotgun_Turret', 'assets/Shotgun_Turret.png');
-        this.load.image('Rocket_Turret', 'assets/Rocket_Turret.png');
+        this.load.image('shotgun_Turret', 'assets/Shotgun_Turret.png');
+        this.load.image('rocket_Turret', 'assets/Rocket_Turret.png');
         
     }
 
