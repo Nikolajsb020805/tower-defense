@@ -86,7 +86,7 @@ export default class underspil extends Phaser.Scene{
         });
 
         this.input.on('pointerdown', (pointer) => {
-            if (this.selectedTowerType && pointer.x < 800) { // Only place on game area, not shop
+            if (this.selectedTowerType && pointer.x < 768) { // Only place on game area, not shop
                 this.placeTower(pointer.x, pointer.y);
             }
         });
