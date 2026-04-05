@@ -54,8 +54,9 @@ export default class underspil extends Phaser.Scene{
 
         // Initialize wave system
         this.currentWave = 1;
+        this.maxWaves = 10; // Win after surviving this many waves
         this.enemiesPerWave = 3; // Start with 3 enemies
-        this.waveText = this.add.text(16, 84, 'Wave: 1', { fontSize: '24px', fill: '#00ff00', stroke: '#000', strokeThickness: 2 });
+        this.waveText = this.add.text(16, 84, 'Wave: 1/' + this.maxWaves, { fontSize: '24px', fill: '#00ff00', stroke: '#000', strokeThickness: 2 });
         this.waveInProgress = false;
 
         // Create projectiles group for the tower using physics group
@@ -159,8 +160,16 @@ export default class underspil extends Phaser.Scene{
             this.money += this.waveReward;
             this.moneyText.setText('Money: $' + this.money);
 
+            // Check for win condition
+            if (this.currentWave >= this.maxWaves) {
+                this.time.delayedCall(1000, () => {
+                    this.scene.start('vundet');
+                });
+                return;
+            }
+
             this.currentWave++;
-            this.waveText.setText('Wave: ' + this.currentWave);
+            this.waveText.setText('Wave: ' + this.currentWave + '/' + this.maxWaves);
 
             // Start next wave after a short delay
             this.time.delayedCall(2000, () => {

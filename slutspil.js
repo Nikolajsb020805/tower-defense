@@ -12,12 +12,15 @@ export default class slutspil extends Phaser.Scene{
 
     preload(){
      this.load.image('Gameover', 'assets/game_over.png');
+     this.load.audio('gameover_music', 'assets/gameover.wav');
     }
     create() {
         this.add.text(384, 70, 'Game Over', { fontSize: '32px', fill: 'rgb(204, 0, 255)', fontStyle: 'bold', stroke: '#000', strokeThickness: 4 }).setOrigin(0.5);
          this.add.text(384, 150, 'Du har tabt! Prøv igen for at forsvare dit hus!', { fontSize: '20px', fill: 'rgb(255, 255, 255)', fontStyle: 'bold', stroke: '#000', strokeThickness: 4 }).setOrigin(0.5);
     this.add.image(512, 384, 'Gameover').setDisplaySize(1024, 768);
-    
+
+    this.sound.stopAll();
+    this.sound.play('gameover_music');
     }
     update() { 
     
