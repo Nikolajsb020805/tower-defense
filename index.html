@@ -1,25 +1,21 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tower Defense</title>
-    <script defer src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
-    
+    <title>Tower Defence</title>
+    <!-- Phaser engine -->
+    <script defer src="https://jsdelivr.net"></script>
 </head>
 <body>
-    
-    <div id="gameCanvas">
-        
-    </div>
-    
-    
-    
 
-    <!-- load the main entry point (which itself imports Tower.js and fjende.js) -->
+    <div id="gameCanvas"></div>
+
+    <!-- 
+      VIGTIGT: Vi fjerner "/" foran main.js. 
+      Når den ligger på GitHub Pages, skal stien være relativ.
+    -->
     <script type="module" src="main.js"></script>
-    <!-- alternatively, you can load Tower.js directly as a module too: -->
-    <!-- <script type="module" src="./Tower.js"></script> -->
 
 </body>
 </html>
-
