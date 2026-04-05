@@ -9,9 +9,13 @@ let tower;
 // Konfiguration af spillet
 const config = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: 1024,
+    height: 768,
     parent: 'gameCanvas',
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    },
     scene: [StartGame, underspil, slutspil],
 };
 

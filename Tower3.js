@@ -2,7 +2,7 @@ export default class Tower3 {
     constructor(scene, x, y, projectiles) {
         this.scene = scene;
         // create the sprite for the tower/player
-        this.player = scene.add.image(x, y, 'Rocket_Turret').setOrigin(0.5).setDisplaySize(192, 96);
+        this.player = scene.add.image(x, y, 'rocket_Turret').setOrigin(0.5).setDisplaySize(192, 96);
         this.range = 300;
         this.projectiles = projectiles;
         this.lastShot = 0;

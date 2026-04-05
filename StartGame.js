@@ -18,9 +18,9 @@ export default class StartGame extends Phaser.Scene{
         this.load.image('pil', 'assets/pil.png');
         this.load.image('hus', 'assets/hus.png');
         this.load.image('shop', 'assets/shoppe.png');
-        this.load.image('shotgun_Turret', 'assets/Shotgun_Turret.png');
-        this.load.image('rocket_Turret', 'assets/Rocket_Turret.png');
-        this.load.image('turret', 'assets/Turret.png');
+        this.load.image('shotgun_Turret', 'assets/shotgun_Turret.png');
+        this.load.image('rocket_Turret', 'assets/rocket_Turret.png');
+        this.load.image('turret', 'assets/turret.png');
        
         
         
@@ -35,10 +35,10 @@ export default class StartGame extends Phaser.Scene{
         this.add.image(870, 150, 'turret').setDisplaySize(260, 128);
         //normal towers
         this.add.text(870, 220, 'Towers = $100', { fontSize: '16px', fill: 'rgb(255, 255, 255)', fontStyle: 'bold', stroke: '#000', strokeThickness: 4 }).setOrigin(0.5);
-        this.add.image(870, 300, 'Shotgun_Turret').setDisplaySize(260, 128);
+        this.add.image(870, 300, 'shotgun_Turret').setDisplaySize(260, 128);
         //shotgun towers
         this.add.text(890, 370, 'Shotgun-Towers = $200', { fontSize: '16px', fill: 'rgb(255, 255, 255)', fontStyle: 'bold', stroke: '#000', strokeThickness: 4 }).setOrigin(0.5);
-        this.add.image(890, 450, 'Rocket_Turret').setDisplaySize(260, 128);
+        this.add.image(890, 450, 'rocket_Turret').setDisplaySize(260, 128);
         //rocket towers
         this.add.text(890, 520, 'Rocket-Towers = $500', { fontSize: '16px', fill: 'rgb(255, 255, 255)', fontStyle: 'bold', stroke: '#000', strokeThickness: 4 }).setOrigin(0.5);
         //forklare spillet 

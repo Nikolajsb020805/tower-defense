@@ -11,7 +11,7 @@ export default class slutspil extends Phaser.Scene{
     }
 
     preload(){
-     this.load.image('Gameover', 'assets/Game_over.png');
+     this.load.image('Gameover', 'assets/game_over.png');
     }
     create() {
         this.add.text(384, 70, 'Game Over', { fontSize: '32px', fill: 'rgb(204, 0, 255)', fontStyle: 'bold', stroke: '#000', strokeThickness: 4 }).setOrigin(0.5);
