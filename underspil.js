@@ -20,12 +20,12 @@ export default class underspil extends Phaser.Scene{
     
 
     preload(){
-        this.load.image('turret', 'assets/Turret.png');
-        this.load.image('fjende', 'assets/Fjende.png');
+        this.load.image('turret', 'assets/turret.png');
+        this.load.image('fjende', 'assets/fjende.png');
         this.load.image('baggrund', 'assets/ban.png');
         this.load.image('shop', 'assets/shoppe.png');
-        this.load.image('shotgun_Turret', 'assets/Shotgun_Turret.png');
-        this.load.image('rocket_Turret', 'assets/Rocket_Turret.png');
+        this.load.image('shotgun_Turret', 'assets/shotgun_Turret.png');
+        this.load.image('rocket_Turret', 'assets/rocket_Turret.png');
         
     }
 
@@ -36,9 +36,9 @@ export default class underspil extends Phaser.Scene{
         this.add.image(898, 384, 'shop').setDisplaySize(260, 768);
         this.add.image(870, 150, 'turret').setDisplaySize(260, 128);
         this.add.text(870, 220, 'Towers = $100', { fontSize: '16px', fill: 'rgb(255, 255, 255)', fontStyle: 'bold', stroke: '#000', strokeThickness: 4 }).setOrigin(0.5);
-        this.add.image(870, 300, 'Shotgun_Turret').setDisplaySize(260, 128);
+        this.add.image(870, 300, 'shotgun_Turret').setDisplaySize(260, 128);
         this.add.text(890, 370, 'Shotguns Towers = $200', { fontSize: '16px', fill: 'rgb(255, 255, 255)', fontStyle: 'bold', stroke: '#000', strokeThickness: 4 }).setOrigin(0.5);
-        this.add.image(890, 450, 'Rocket_Turret').setDisplaySize(260, 128);
+        this.add.image(890, 450, 'rocket_Turret').setDisplaySize(260, 128);
         this.add.text(890, 520, 'Rocket Towers = $500', { fontSize: '16px', fill: 'rgb(255, 255, 255)', fontStyle: 'bold', stroke: '#000', strokeThickness: 4 }).setOrigin(0.5);
 
         // Initialize money system
@@ -247,7 +247,7 @@ export default class underspil extends Phaser.Scene{
 
         // Create placement preview
         if (this.placementPreview) this.placementPreview.destroy();
-        const spriteKey = { basic: 'turret', shotgun: 'Shotgun_Turret', rocket: 'Rocket_Turret' }[type];
+        const spriteKey = { basic: 'turret', shotgun: 'shotgun_Turret', rocket: 'rocket_Turret' }[type];
         this.placementPreview = this.add.image(0, 0, spriteKey).setOrigin(0.5).setDisplaySize(192, 96).setAlpha(0.7);
     }
 
