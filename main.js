@@ -1,36 +1,29 @@
-import fjende from './fjende.js';
-import Tower from './Tower.js';
-import StartGame from './startgame.js';
-import underspil from './underspil.js';
-import slutspil from './slutspil.js';
+import fjende from "./fjende.js";
+import Tower from "./Tower.js";
+import StartGame from "./StartGame.js";
+import underspil from "./underspil.js";
+import slutspil from "./slutspil.js";
 
+let tower; 
 
-let tower; // Flyttet til toppen for overblik
-
-// tilføj billeder her:
-// function preload() {
-    
-//     this.load.image('turret', 'assets/Turret.png');
-// }
-
+// Konfiguration af spillet
 const config = {
     type: Phaser.AUTO,
-    width: 1024,
-    height: 768,
+    width: 800,
+    height: 600,
     parent: 'gameCanvas',
     scene: [StartGame, underspil, slutspil],
 };
 
 const game = new Phaser.Game(config);
 
-// function create() {
-    
-    
-//     tower = new Tower(this, 600, 600);
-// }
+/* 
+   Bemærk: Funktionerne nedenfor er pt. uden for Phaser-scenerne. 
+   Hvis de skal bruges, skal de ligge inde i f.eks. 'underspil.js' 
+*/
 
 // function update() {
-//     if (tower) {
-//         tower.update(this.input.activePointer);
-//     }
+//    if (tower) {
+//        tower.update(this.input.activePointer);
+//    }
 // }
