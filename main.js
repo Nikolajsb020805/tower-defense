@@ -3,6 +3,7 @@ import Tower from "./Tower.js";
 import StartGame from "./StartGame.js";
 import underspil from "./underspil.js";
 import slutspil from "./slutspil.js";
+import vundet from "./vundet.js";
 
 let tower; 
 
@@ -16,7 +17,7 @@ const config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH
     },
-    scene: [StartGame, underspil, slutspil],
+    scene: [StartGame, underspil, slutspil, vundet],
 };
 
 const game = new Phaser.Game(config);
